@@ -1,0 +1,1 @@
+<?php return unserialize('a:1:{i:0;O:48:"Doctrine\\ODM\\PHPCR\\Mapping\\Annotations\\Referrers":3:{s:12:"referencedBy";s:7:"content";s:17:"referringDocument";s:53:"Symfony\\Cmf\\Bundle\\RoutingBundle\\Doctrine\\Phpcr\\Route";s:7:"cascade";a:0:{}}}');

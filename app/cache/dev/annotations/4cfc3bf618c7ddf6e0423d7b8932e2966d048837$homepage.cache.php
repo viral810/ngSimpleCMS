@@ -1,0 +1,1 @@
+<?php return unserialize('a:1:{i:0;O:51:"Doctrine\\ODM\\PHPCR\\Mapping\\Annotations\\ReferenceOne":4:{s:8:"property";N;s:14:"targetDocument";s:33:"Acme\\BasicCmsBundle\\Document\\Page";s:8:"strategy";s:4:"weak";s:7:"cascade";a:0:{}}}');

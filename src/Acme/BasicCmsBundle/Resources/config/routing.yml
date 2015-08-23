@@ -1,0 +1,3 @@
+app_basic_cms:
+    resource: "@AcmeBasicCmsBundle/Controller/"
+    type:     annotation # required to enable the Annotation reader for this resource
