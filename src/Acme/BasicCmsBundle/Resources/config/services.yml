@@ -39,3 +39,5 @@ services:
             - [setRequest, ["@?request="]]
         tags:
             - { name: knp_menu.provider }
+
+

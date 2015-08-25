@@ -65,6 +65,16 @@ doctrine:
         #   2. Uncomment database_path in parameters.yml.dist
         #   3. Uncomment next line:
         #     path:     "%database_path%"
+        types:
+          json: Sonata\Doctrine\Types\JsonType
+
+    orm:
+                entity_managers:
+                    default:
+                        mappings:
+                            ApplicationSonataUserBundle: ~
+                            SonataUserBundle: ~
+                            FOSUserBundle: ~                                    # If SonataUserBundle extends it
 
 doctrine_phpcr:
    # configure the PHPCR session
@@ -115,6 +125,9 @@ sonata_block:
             settings:
                 id: '/cms'
             contexts: [admin]
+        sonata.user.block.menu:    # used to display the menu in profile pages
+        sonata.user.block.account: # used to display menu option (login option)
+        sonata.block.service.text: # used to if you plan to use Sonata user routes
 
 sonata_admin:
     dashboard:
@@ -139,3 +152,21 @@ sonata_doctrine_phpcr_admin:
 
 knp_menu:
     twig: true
+
+sonata_user:
+    security_acl: true
+    manager_type: orm # can be orm or mongodb
+
+fos_user:
+    db_driver:      orm # can be orm or odm
+    firewall_name:  main
+    user_class:     Application\Sonata\UserBundle\Entity\User
+
+
+    group:
+            group_class:   Application\Sonata\UserBundle\Entity\Group
+            group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
+
+    service:
+            user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
+
