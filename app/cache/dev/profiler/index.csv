@@ -37,3 +37,10 @@ c071b3,127.0.0.1,GET,http://localhost:8000/admin/login,1440473127,,200
 84c480,127.0.0.1,GET,http://localhost:8000/admin/login,1440473175,,200
 615c07,127.0.0.1,POST,http://localhost:8000/admin/login_check,1440473181,,302
 5279f5,127.0.0.1,GET,http://localhost:8000/admin/login,1440473181,,200
+a53b6a,127.0.0.1,GET,http://localhost:8000/admin/login,1440473280,,200
+4308c9,127.0.0.1,POST,http://localhost:8000/admin/login_check,1440473282,,302
+dd01e6,127.0.0.1,GET,http://localhost:8000/admin/login,1440473282,,200
+629844,127.0.0.1,POST,http://localhost:8000/admin/login_check,1440473291,,302
+3408b6,127.0.0.1,GET,http://localhost:8000/admin/login,1440473292,,200
+f982f6,127.0.0.1,POST,http://localhost:8000/admin/login_check,1440473302,,302
+c8de63,127.0.0.1,GET,http://localhost:8000/admin/login,1440473302,,200
