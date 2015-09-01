@@ -121,6 +121,8 @@ sonata_block:
         # Enable the SonataAdminBundle block
         sonata.admin.block.admin_list:
             contexts: [admin]
+        sonata.admin.block.search_result:
+            contexts: [admin]
         sonata_admin_doctrine_phpcr.tree_block:
             settings:
                 id: '/cms'
@@ -130,6 +132,29 @@ sonata_block:
         sonata.block.service.text: # used to if you plan to use Sonata user routes
 
 sonata_admin:
+    title: Hybrid CMS
+    templates:
+        layout: AcmeBackendBundle::standard_layout.html.twig
+    assets:
+        javascripts:
+
+                    # Defaults:
+                    - bundles/sonataadmin/vendor/jquery/dist/jquery.min.js
+                    - bundles/sonataadmin/vendor/jquery.scrollTo/jquery.scrollTo.min.js
+                    - bundles/sonatacore/vendor/moment/min/moment.min.js
+                    - bundles/sonataadmin/vendor/bootstrap/dist/js/bootstrap.min.js
+                    - bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js
+                    - bundles/sonataadmin/vendor/jqueryui/ui/minified/jquery-ui.min.js
+                    - bundles/sonataadmin/vendor/jqueryui/ui/minified/i18n/jquery-ui-i18n.min.js
+                    - bundles/sonataadmin/jquery/jquery.form.js
+                    - bundles/sonataadmin/jquery/jquery.confirmExit.js
+                    - bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js
+                    - bundles/sonataadmin/vendor/select2/select2.min.js
+                    - bundles/sonataadmin/App.js
+                    - bundles/sonataadmin/Admin.js
+                    - https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js
+                    - https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js
+                    - assets/js/app.js
     dashboard:
         blocks:
             - { position: left, type: sonata_admin_doctrine_phpcr.tree_block }

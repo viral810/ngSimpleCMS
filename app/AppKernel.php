@@ -41,9 +41,8 @@ class AppKernel extends Kernel
 
             new AppBundle\AppBundle(),
             new Acme\BasicCmsBundle\AcmeBasicCmsBundle(),
-            new Acme\UserBundle\AcmeUserBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
-
+            new Acme\BackendBundle\AcmeBackendBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

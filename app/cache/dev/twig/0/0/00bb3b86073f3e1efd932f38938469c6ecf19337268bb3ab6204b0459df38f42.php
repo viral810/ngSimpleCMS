@@ -15,8 +15,8 @@ class __TwigTemplate_00bb3b86073f3e1efd932f38938469c6ecf19337268bb3ab6204b0459df
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_84d74eb025ec3bb32a792722a0c3d29954402ffd5cdf2cb6508568c93e902ca2 = $this->env->getExtension("native_profiler");
-        $__internal_84d74eb025ec3bb32a792722a0c3d29954402ffd5cdf2cb6508568c93e902ca2->enter($__internal_84d74eb025ec3bb32a792722a0c3d29954402ffd5cdf2cb6508568c93e902ca2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SonataDoctrinePHPCRAdminBundle:Tree:routing_defaults.html.twig"));
+        $__internal_e8dabd0db3cf8d4f3057facb37126450768b0aeea45879f144c259f87658fe4c = $this->env->getExtension("native_profiler");
+        $__internal_e8dabd0db3cf8d4f3057facb37126450768b0aeea45879f144c259f87658fe4c->enter($__internal_e8dabd0db3cf8d4f3057facb37126450768b0aeea45879f144c259f87658fe4c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SonataDoctrinePHPCRAdminBundle:Tree:routing_defaults.html.twig"));
 
         // line 11
         echo "
@@ -57,7 +57,7 @@ class __TwigTemplate_00bb3b86073f3e1efd932f38938469c6ecf19337268bb3ab6204b0459df
         echo "
 ";
         
-        $__internal_84d74eb025ec3bb32a792722a0c3d29954402ffd5cdf2cb6508568c93e902ca2->leave($__internal_84d74eb025ec3bb32a792722a0c3d29954402ffd5cdf2cb6508568c93e902ca2_prof);
+        $__internal_e8dabd0db3cf8d4f3057facb37126450768b0aeea45879f144c259f87658fe4c->leave($__internal_e8dabd0db3cf8d4f3057facb37126450768b0aeea45879f144c259f87658fe4c_prof);
 
     }
 

@@ -36,8 +36,8 @@
       <parameter key="SunraAngularBundle">Sunra\AngularBundle\SunraAngularBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="AcmeBasicCmsBundle">Acme\BasicCmsBundle\AcmeBasicCmsBundle</parameter>
-      <parameter key="AcmeUserBundle">Acme\UserBundle\AcmeUserBundle</parameter>
       <parameter key="ApplicationSonataUserBundle">Application\Sonata\UserBundle\ApplicationSonataUserBundle</parameter>
+      <parameter key="AcmeBackendBundle">Acme\BackendBundle\AcmeBackendBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -749,6 +749,13 @@
         <parameter key="cache">sonata.cache.noop</parameter>
         <parameter key="settings" type="collection"/>
       </parameter>
+      <parameter key="sonata.admin.block.search_result" type="collection">
+        <parameter key="contexts" type="collection">
+          <parameter>admin</parameter>
+        </parameter>
+        <parameter key="cache">sonata.cache.noop</parameter>
+        <parameter key="settings" type="collection"/>
+      </parameter>
       <parameter key="sonata_admin_doctrine_phpcr.tree_block" type="collection">
         <parameter key="settings" type="collection">
           <parameter key="id">/cms</parameter>
@@ -784,6 +791,7 @@
     <parameter key="sonata_block.cache_blocks" type="collection">
       <parameter key="by_type" type="collection">
         <parameter key="sonata.admin.block.admin_list">sonata.cache.noop</parameter>
+        <parameter key="sonata.admin.block.search_result">sonata.cache.noop</parameter>
         <parameter key="sonata_admin_doctrine_phpcr.tree_block">sonata.cache.noop</parameter>
         <parameter key="sonata.user.block.menu">sonata.cache.noop</parameter>
         <parameter key="sonata.user.block.account">sonata.cache.noop</parameter>
@@ -792,8 +800,8 @@
     </parameter>
     <parameter key="sonata.admin.configuration.templates" type="collection">
       <parameter key="user_block">SonataUserBundle:Admin/Core:user_block.html.twig</parameter>
+      <parameter key="layout">AcmeBackendBundle::standard_layout.html.twig</parameter>
       <parameter key="add_block">SonataAdminBundle:Core:add_block.html.twig</parameter>
-      <parameter key="layout">SonataAdminBundle::standard_layout.html.twig</parameter>
       <parameter key="ajax">SonataAdminBundle::ajax_layout.html.twig</parameter>
       <parameter key="dashboard">SonataAdminBundle:Core:dashboard.html.twig</parameter>
       <parameter key="search">SonataAdminBundle:Core:search.html.twig</parameter>
@@ -1474,7 +1482,7 @@
             <argument>/Applications/MAMP/htdocs/ngSimpleCMS/vendor/sonata-project/user-bundle/Resources/translations/SonataUserBundle.fr.xliff</argument>
             <argument>/Applications/MAMP/htdocs/ngSimpleCMS/vendor/symfony-cmf/core-bundle/Resources/translations/CmfCoreBundle.fr.xliff</argument>
             <argument>/Applications/MAMP/htdocs/ngSimpleCMS/vendor/symfony-cmf/menu-bundle/Resources/translations/CmfMenuBundle.fr.xliff</argument>
-            <argument>/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/UserBundle/Resources/translations/messages.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/BackendBundle/Resources/translations/messages.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>/Applications/MAMP/htdocs/ngSimpleCMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.gl.xlf</argument>
@@ -2765,7 +2773,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>55dbe238395705.50882119</argument>
+            <argument>55e51a1f1cfbb4.02111992</argument>
           </service>
         </argument>
         <argument type="service">
@@ -2779,7 +2787,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>55dbe238395705.50882119</argument>
+            <argument>55e51a1f1cfbb4.02111992</argument>
           </service>
         </argument>
       </argument>
@@ -3160,7 +3168,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>55dbe238395705.50882119</argument>
+            <argument>55e51a1f1cfbb4.02111992</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3272,7 +3280,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>55dbe238395705.50882119</argument>
+            <argument>55e51a1f1cfbb4.02111992</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -4836,7 +4844,9 @@
       <call method="add">
         <argument>sonata.admin.block.search_result</argument>
         <argument>sonata.admin.block.search_result</argument>
-        <argument type="collection"/>
+        <argument type="collection">
+          <argument>admin</argument>
+        </argument>
       </call>
       <call method="add">
         <argument>sonata_admin_doctrine_phpcr.tree_block</argument>
@@ -4866,6 +4876,7 @@
       <argument type="collection">
         <argument key="by_type" type="collection">
           <argument key="sonata.admin.block.admin_list">sonata.cache.noop</argument>
+          <argument key="sonata.admin.block.search_result">sonata.cache.noop</argument>
           <argument key="sonata_admin_doctrine_phpcr.tree_block">sonata.cache.noop</argument>
           <argument key="sonata.user.block.menu">sonata.cache.noop</argument>
           <argument key="sonata.user.block.account">sonata.cache.noop</argument>
@@ -4893,6 +4904,7 @@
       <argument type="collection">
         <argument key="by_type" type="collection">
           <argument key="sonata.admin.block.admin_list">sonata.cache.noop</argument>
+          <argument key="sonata.admin.block.search_result">sonata.cache.noop</argument>
           <argument key="sonata_admin_doctrine_phpcr.tree_block">sonata.cache.noop</argument>
           <argument key="sonata.user.block.menu">sonata.cache.noop</argument>
           <argument key="sonata.user.block.account">sonata.cache.noop</argument>
@@ -4915,6 +4927,7 @@
       <tag name="sonata.block.loader"/>
       <argument type="collection">
         <argument>sonata.admin.block.admin_list</argument>
+        <argument>sonata.admin.block.search_result</argument>
         <argument>sonata_admin_doctrine_phpcr.tree_block</argument>
         <argument>sonata.user.block.menu</argument>
         <argument>sonata.user.block.account</argument>
@@ -4979,7 +4992,7 @@
     </service>
     <service id="sonata.admin.pool" class="Sonata\AdminBundle\Admin\Pool">
       <argument type="service" id="service_container"/>
-      <argument>Sonata Admin</argument>
+      <argument>Hybrid CMS</argument>
       <argument>bundles/sonataadmin/logo_title.png</argument>
       <argument type="collection">
         <argument key="html5_validate">true</argument>
@@ -5004,6 +5017,9 @@
           <argument>bundles/sonataadmin/vendor/select2/select2.min.js</argument>
           <argument>bundles/sonataadmin/App.js</argument>
           <argument>bundles/sonataadmin/Admin.js</argument>
+          <argument>https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js</argument>
+          <argument>https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js</argument>
+          <argument>assets/js/app.js</argument>
         </argument>
         <argument key="stylesheets" type="collection">
           <argument>bundles/sonataadmin/vendor/bootstrap/dist/css/bootstrap.min.css</argument>
@@ -5023,8 +5039,8 @@
       <call method="setTemplates">
         <argument type="collection">
           <argument key="user_block">SonataUserBundle:Admin/Core:user_block.html.twig</argument>
+          <argument key="layout">AcmeBackendBundle::standard_layout.html.twig</argument>
           <argument key="add_block">SonataAdminBundle:Core:add_block.html.twig</argument>
-          <argument key="layout">SonataAdminBundle::standard_layout.html.twig</argument>
           <argument key="ajax">SonataAdminBundle::ajax_layout.html.twig</argument>
           <argument key="dashboard">SonataAdminBundle:Core:dashboard.html.twig</argument>
           <argument key="search">SonataAdminBundle:Core:search.html.twig</argument>
@@ -5818,7 +5834,7 @@
         <argument type="collection">
           <argument key="user_block">SonataUserBundle:Admin/Core:user_block.html.twig</argument>
           <argument key="add_block">SonataAdminBundle:Core:add_block.html.twig</argument>
-          <argument key="layout">SonataAdminBundle::standard_layout.html.twig</argument>
+          <argument key="layout">AcmeBackendBundle::standard_layout.html.twig</argument>
           <argument key="ajax">SonataAdminBundle::ajax_layout.html.twig</argument>
           <argument key="dashboard">SonataAdminBundle:Core:dashboard.html.twig</argument>
           <argument key="list">SonataAdminBundle:CRUD:list.html.twig</argument>
@@ -5924,7 +5940,7 @@
         <argument type="collection">
           <argument key="user_block">SonataUserBundle:Admin/Core:user_block.html.twig</argument>
           <argument key="add_block">SonataAdminBundle:Core:add_block.html.twig</argument>
-          <argument key="layout">SonataAdminBundle::standard_layout.html.twig</argument>
+          <argument key="layout">AcmeBackendBundle::standard_layout.html.twig</argument>
           <argument key="ajax">SonataAdminBundle::ajax_layout.html.twig</argument>
           <argument key="dashboard">SonataAdminBundle:Core:dashboard.html.twig</argument>
           <argument key="list">SonataAdminBundle:CRUD:list.html.twig</argument>
@@ -6060,8 +6076,8 @@
         <argument key="SunraAngularBundle">Sunra\AngularBundle\SunraAngularBundle</argument>
         <argument key="AppBundle">AppBundle\AppBundle</argument>
         <argument key="AcmeBasicCmsBundle">Acme\BasicCmsBundle\AcmeBasicCmsBundle</argument>
-        <argument key="AcmeUserBundle">Acme\UserBundle\AcmeUserBundle</argument>
         <argument key="ApplicationSonataUserBundle">Application\Sonata\UserBundle\ApplicationSonataUserBundle</argument>
+        <argument key="AcmeBackendBundle">Acme\BackendBundle\AcmeBackendBundle</argument>
         <argument key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</argument>
         <argument key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</argument>
         <argument key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</argument>
@@ -6241,7 +6257,7 @@
         <argument type="collection">
           <argument key="user_block">SonataUserBundle:Admin/Core:user_block.html.twig</argument>
           <argument key="add_block">SonataAdminBundle:Core:add_block.html.twig</argument>
-          <argument key="layout">SonataAdminBundle::standard_layout.html.twig</argument>
+          <argument key="layout">AcmeBackendBundle::standard_layout.html.twig</argument>
           <argument key="ajax">SonataAdminBundle::ajax_layout.html.twig</argument>
           <argument key="dashboard">SonataAdminBundle:Core:dashboard.html.twig</argument>
           <argument key="list">SonataAdminBundle:CRUD:list.html.twig</argument>
@@ -6348,7 +6364,7 @@
         <argument type="collection">
           <argument key="user_block">SonataUserBundle:Admin/Core:user_block.html.twig</argument>
           <argument key="add_block">SonataAdminBundle:Core:add_block.html.twig</argument>
-          <argument key="layout">SonataAdminBundle::standard_layout.html.twig</argument>
+          <argument key="layout">AcmeBackendBundle::standard_layout.html.twig</argument>
           <argument key="ajax">SonataAdminBundle::ajax_layout.html.twig</argument>
           <argument key="dashboard">SonataAdminBundle:Core:dashboard.html.twig</argument>
           <argument key="list">SonataAdminBundle:CRUD:list.html.twig</argument>
@@ -6865,12 +6881,12 @@
         <argument>AcmeBasicCms</argument>
       </call>
       <call method="addPath">
-        <argument>/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/UserBundle/Resources/views</argument>
-        <argument>AcmeUser</argument>
-      </call>
-      <call method="addPath">
         <argument>/Applications/MAMP/htdocs/ngSimpleCMS/src/Application/Sonata/UserBundle/Resources/views</argument>
         <argument>ApplicationSonataUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/BackendBundle/Resources/views</argument>
+        <argument>AcmeBackend</argument>
       </call>
       <call method="addPath">
         <argument>/Applications/MAMP/htdocs/ngSimpleCMS/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

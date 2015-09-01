@@ -127,9 +127,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // acme_user_default_index
+        // acme_backend_default_index
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'acme_user_default_index')), array (  '_controller' => 'Acme\\UserBundle\\Controller\\DefaultController::indexAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'acme_backend_default_index')), array (  '_controller' => 'Acme\\BackendBundle\\Controller\\DefaultController::indexAction',));
         }
 
         // make_homepage
