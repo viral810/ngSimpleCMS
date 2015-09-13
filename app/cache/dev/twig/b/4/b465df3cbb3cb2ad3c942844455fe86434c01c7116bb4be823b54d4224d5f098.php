@@ -15,8 +15,8 @@ class __TwigTemplate_b465df3cbb3cb2ad3c942844455fe86434c01c7116bb4be823b54d4224d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_df5db3a3ea6bcdf88232fb17629b7e1582031a53d39d237b4e2e3aa219b879c1 = $this->env->getExtension("native_profiler");
-        $__internal_df5db3a3ea6bcdf88232fb17629b7e1582031a53d39d237b4e2e3aa219b879c1->enter($__internal_df5db3a3ea6bcdf88232fb17629b7e1582031a53d39d237b4e2e3aa219b879c1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AcmeBasicCmsBundle:Front:home.html.twig"));
+        $__internal_b11e5496ed2fe767a0737e847cbb36b99536203c6ad1bf15cab4d0d34d6fef38 = $this->env->getExtension("native_profiler");
+        $__internal_b11e5496ed2fe767a0737e847cbb36b99536203c6ad1bf15cab4d0d34d6fef38->enter($__internal_b11e5496ed2fe767a0737e847cbb36b99536203c6ad1bf15cab4d0d34d6fef38_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AcmeBasicCmsBundle:Front:home.html.twig"));
 
         // line 1
         echo "<div class=\"cta-wrapper\">
@@ -46,7 +46,7 @@ class __TwigTemplate_b465df3cbb3cb2ad3c942844455fe86434c01c7116bb4be823b54d4224d
     </a>
 </div>";
         
-        $__internal_df5db3a3ea6bcdf88232fb17629b7e1582031a53d39d237b4e2e3aa219b879c1->leave($__internal_df5db3a3ea6bcdf88232fb17629b7e1582031a53d39d237b4e2e3aa219b879c1_prof);
+        $__internal_b11e5496ed2fe767a0737e847cbb36b99536203c6ad1bf15cab4d0d34d6fef38->leave($__internal_b11e5496ed2fe767a0737e847cbb36b99536203c6ad1bf15cab4d0d34d6fef38_prof);
 
     }
 

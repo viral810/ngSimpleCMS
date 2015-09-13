@@ -33,14 +33,20 @@
             <h1><a href="/">House<span class="title-span">T.O.</span></a></h1>
 
             <div class="nav-right">
-                <a href="#" class="rentorsell" role="button">Rent or Sell Property</a>
+                <ul class="top-menu">
+                    <li><a href="#" class="rentorsell" role="button">Rent or Sell Property</a></li>
                 {% if app.user %}
-                    <a href="/admin/dashboard" class="login" role="button">Admin</a>
-                    <a href="/logout" class="login" role="button">Logout</a>
+                    <li class="has-children"><a href="/admin/dashboard" class="login" role="button">{{ app.user.username }}</a>
+                        <ul class="sub-menu">
+                            <li><a href="#" class="login" role="button">Shortlist</a></li>
+                            <li><a href="/logout" class="login" role="button">Logout</a></li>
+                        </ul>
+                    </li>
                 {% else %}
-                    <a href="/admin/login" class="login" role="button">login</a>
+                    <li><a href="/admin/login" class="login" role="button">login</a></li>
                 {% endif %}
-                <a href="#" id="trigger" role="button">Menu</a>
+                    <li><a href="#" id="trigger" role="button">Menu</a></li>
+                </ul>
             </div>
         </div>
     </header>

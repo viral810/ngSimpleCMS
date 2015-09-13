@@ -32,12 +32,13 @@ class AppKernel extends Kernel
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
 
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+
+            new JMS\SerializerBundle\JMSSerializerBundle(),
 
             new Symfony\Cmf\Bundle\TreeBrowserBundle\CmfTreeBrowserBundle(),
             new Symfony\Cmf\Bundle\CoreBundle\CmfCoreBundle(),
             new Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
-
-            new Sunra\AngularBundle\SunraAngularBundle(),
 
             new Acme\BasicCmsBundle\AcmeBasicCmsBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),

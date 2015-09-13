@@ -1,0 +1,16 @@
+.jstree a {
+    width: 95%;
+    width: calc(100% - 20px);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: -5px;
+    box-sizing: content-box;
+}
+
+.jstree a:hover {
+    width: auto;
+}
+
+#jstree-marker-line {
+    pointer-events: none;
+}

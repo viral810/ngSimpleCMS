@@ -838,6 +838,31 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/users')) {
+            // get_users
+            if (preg_match('#^/users(?:\\.(?P<_format>json|xml|html))?$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_get_users;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_users')), array (  '_controller' => 'Application\\Sonata\\UserBundle\\Controller\\UsersController::getUsersAction',  '_format' => NULL,));
+            }
+            not_get_users:
+
+            // get_user
+            if (preg_match('#^/users/(?P<user>[^/\\.]++)(?:\\.(?P<_format>json|xml|html))?$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_get_user;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'get_user')), array (  '_controller' => 'Application\\Sonata\\UserBundle\\Controller\\UsersController::getUserAction',  '_format' => NULL,));
+            }
+            not_get_user:
+
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

@@ -19,8 +19,8 @@ class __TwigTemplate_8fd49b60e2ad269d66cdcb10e8055f88f07789ebf170f18578a19236b01
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6d496011096ce1f7840b9ad09299ecae1bf36fd7475870aea2a1a57d485e35ff = $this->env->getExtension("native_profiler");
-        $__internal_6d496011096ce1f7840b9ad09299ecae1bf36fd7475870aea2a1a57d485e35ff->enter($__internal_6d496011096ce1f7840b9ad09299ecae1bf36fd7475870aea2a1a57d485e35ff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_89513c564694e6f89c1dd4ddd1fe2bf3e7b8cdd7d3d159b049dd91f461783460 = $this->env->getExtension("native_profiler");
+        $__internal_89513c564694e6f89c1dd4ddd1fe2bf3e7b8cdd7d3d159b049dd91f461783460->enter($__internal_89513c564694e6f89c1dd4ddd1fe2bf3e7b8cdd7d3d159b049dd91f461783460_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -60,59 +60,67 @@ class __TwigTemplate_8fd49b60e2ad269d66cdcb10e8055f88f07789ebf170f18578a19236b01
             <h1><a href=\"/\">House<span class=\"title-span\">T.O.</span></a></h1>
 
             <div class=\"nav-right\">
-                <a href=\"#\" class=\"rentorsell\" role=\"button\">Rent or Sell Property</a>
+                <ul class=\"top-menu\">
+                    <li><a href=\"#\" class=\"rentorsell\" role=\"button\">Rent or Sell Property</a></li>
                 ";
-        // line 37
+        // line 38
         if ($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) {
-            // line 38
-            echo "                    <a href=\"/admin/dashboard\" class=\"login\" role=\"button\">Admin</a>
-                    <a href=\"/logout\" class=\"login\" role=\"button\">Logout</a>
+            // line 39
+            echo "                    <li class=\"has-children\"><a href=\"/admin/dashboard\" class=\"login\" role=\"button\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+            echo "</a>
+                        <ul class=\"sub-menu\">
+                            <li><a href=\"#\" class=\"login\" role=\"button\">Shortlist</a></li>
+                            <li><a href=\"/logout\" class=\"login\" role=\"button\">Logout</a></li>
+                        </ul>
+                    </li>
                 ";
         } else {
-            // line 41
-            echo "                    <a href=\"/admin/login\" class=\"login\" role=\"button\">login</a>
+            // line 46
+            echo "                    <li><a href=\"/admin/login\" class=\"login\" role=\"button\">login</a></li>
                 ";
         }
-        // line 43
-        echo "                <a href=\"#\" id=\"trigger\" role=\"button\">Menu</a>
+        // line 48
+        echo "                    <li><a href=\"#\" id=\"trigger\" role=\"button\">Menu</a></li>
+                </ul>
             </div>
         </div>
     </header>
     <div ng-view></div>
     ";
-        // line 48
+        // line 54
         $this->displayBlock('body', $context, $blocks);
-        // line 49
+        // line 55
         echo "</div>
     ";
-        // line 50
+        // line 56
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 62
+        // line 68
         echo "</body>
 </html>
 ";
         
-        $__internal_6d496011096ce1f7840b9ad09299ecae1bf36fd7475870aea2a1a57d485e35ff->leave($__internal_6d496011096ce1f7840b9ad09299ecae1bf36fd7475870aea2a1a57d485e35ff_prof);
+        $__internal_89513c564694e6f89c1dd4ddd1fe2bf3e7b8cdd7d3d159b049dd91f461783460->leave($__internal_89513c564694e6f89c1dd4ddd1fe2bf3e7b8cdd7d3d159b049dd91f461783460_prof);
 
     }
 
     // line 6
     public function block_title($context, array $blocks = array())
     {
-        $__internal_f79207c3e29c1bb62e58171308f5597762dad063feb783249f318a840aca119f = $this->env->getExtension("native_profiler");
-        $__internal_f79207c3e29c1bb62e58171308f5597762dad063feb783249f318a840aca119f->enter($__internal_f79207c3e29c1bb62e58171308f5597762dad063feb783249f318a840aca119f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_387000b84616db3be6e4271804b46ca7e34a1414baac42b99dcd04b28ff45b1e = $this->env->getExtension("native_profiler");
+        $__internal_387000b84616db3be6e4271804b46ca7e34a1414baac42b99dcd04b28ff45b1e->enter($__internal_387000b84616db3be6e4271804b46ca7e34a1414baac42b99dcd04b28ff45b1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Sell or Rent Property in Toronto, Hamilton, Kitchener, Vaughan | Ontario | Canada";
         
-        $__internal_f79207c3e29c1bb62e58171308f5597762dad063feb783249f318a840aca119f->leave($__internal_f79207c3e29c1bb62e58171308f5597762dad063feb783249f318a840aca119f_prof);
+        $__internal_387000b84616db3be6e4271804b46ca7e34a1414baac42b99dcd04b28ff45b1e->leave($__internal_387000b84616db3be6e4271804b46ca7e34a1414baac42b99dcd04b28ff45b1e_prof);
 
     }
 
     // line 14
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_b632757154d8c6b5740ed8d50cd508ea42e7a51710f461051ddcd1f93a1413b6 = $this->env->getExtension("native_profiler");
-        $__internal_b632757154d8c6b5740ed8d50cd508ea42e7a51710f461051ddcd1f93a1413b6->enter($__internal_b632757154d8c6b5740ed8d50cd508ea42e7a51710f461051ddcd1f93a1413b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_0305b4656f75f0ec86605a85458546358dc151f6cf2aa4a39755d503f590dba0 = $this->env->getExtension("native_profiler");
+        $__internal_0305b4656f75f0ec86605a85458546358dc151f6cf2aa4a39755d503f590dba0->enter($__internal_0305b4656f75f0ec86605a85458546358dc151f6cf2aa4a39755d503f590dba0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 15
         echo "        ";
@@ -149,33 +157,33 @@ class __TwigTemplate_8fd49b60e2ad269d66cdcb10e8055f88f07789ebf170f18578a19236b01
         echo "        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css\" />
     ";
         
-        $__internal_b632757154d8c6b5740ed8d50cd508ea42e7a51710f461051ddcd1f93a1413b6->leave($__internal_b632757154d8c6b5740ed8d50cd508ea42e7a51710f461051ddcd1f93a1413b6_prof);
+        $__internal_0305b4656f75f0ec86605a85458546358dc151f6cf2aa4a39755d503f590dba0->leave($__internal_0305b4656f75f0ec86605a85458546358dc151f6cf2aa4a39755d503f590dba0_prof);
 
     }
 
-    // line 48
+    // line 54
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0c8d5a55d826cdf87e4a8c67ae889c056ed1945f743600598e64cd587830161f = $this->env->getExtension("native_profiler");
-        $__internal_0c8d5a55d826cdf87e4a8c67ae889c056ed1945f743600598e64cd587830161f->enter($__internal_0c8d5a55d826cdf87e4a8c67ae889c056ed1945f743600598e64cd587830161f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0c96699553311d35fc06a7cefa2c9b531f573cf3e497400678c90a8009047565 = $this->env->getExtension("native_profiler");
+        $__internal_0c96699553311d35fc06a7cefa2c9b531f573cf3e497400678c90a8009047565->enter($__internal_0c96699553311d35fc06a7cefa2c9b531f573cf3e497400678c90a8009047565_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_0c8d5a55d826cdf87e4a8c67ae889c056ed1945f743600598e64cd587830161f->leave($__internal_0c8d5a55d826cdf87e4a8c67ae889c056ed1945f743600598e64cd587830161f_prof);
+        $__internal_0c96699553311d35fc06a7cefa2c9b531f573cf3e497400678c90a8009047565->leave($__internal_0c96699553311d35fc06a7cefa2c9b531f573cf3e497400678c90a8009047565_prof);
 
     }
 
-    // line 50
+    // line 56
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_92aa28fb1f859d0a56e8e928b7877bff0ecf310625cccfb65e372fd069fbbc9b = $this->env->getExtension("native_profiler");
-        $__internal_92aa28fb1f859d0a56e8e928b7877bff0ecf310625cccfb65e372fd069fbbc9b->enter($__internal_92aa28fb1f859d0a56e8e928b7877bff0ecf310625cccfb65e372fd069fbbc9b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_362eceeaddbfbcf5bef1a4f64d5158d90de1bd0698322fc18efdf89342a26914 = $this->env->getExtension("native_profiler");
+        $__internal_362eceeaddbfbcf5bef1a4f64d5158d90de1bd0698322fc18efdf89342a26914->enter($__internal_362eceeaddbfbcf5bef1a4f64d5158d90de1bd0698322fc18efdf89342a26914_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 51
+        // line 57
         echo "        ";
         if (isset($context['assetic']['debug']) && $context['assetic']['debug']) {
             // asset "d117c2b_0"
             $context["asset_url"] = isset($context['assetic']['use_controller']) && $context['assetic']['use_controller'] ? $this->env->getExtension('routing')->getPath("_assetic_d117c2b_0") : $this->env->getExtension('asset')->getAssetUrl("_controller/js/d117c2b_jquery.min_1.js");
-            // line 59
+            // line 65
             echo "        <script src=\"";
             echo twig_escape_filter($this->env, (isset($context["asset_url"]) ? $context["asset_url"] : $this->getContext($context, "asset_url")), "html", null, true);
             echo "\"></script>
@@ -219,10 +227,10 @@ class __TwigTemplate_8fd49b60e2ad269d66cdcb10e8055f88f07789ebf170f18578a19236b01
         ";
         }
         unset($context["asset_url"]);
-        // line 61
+        // line 67
         echo "    ";
         
-        $__internal_92aa28fb1f859d0a56e8e928b7877bff0ecf310625cccfb65e372fd069fbbc9b->leave($__internal_92aa28fb1f859d0a56e8e928b7877bff0ecf310625cccfb65e372fd069fbbc9b_prof);
+        $__internal_362eceeaddbfbcf5bef1a4f64d5158d90de1bd0698322fc18efdf89342a26914->leave($__internal_362eceeaddbfbcf5bef1a4f64d5158d90de1bd0698322fc18efdf89342a26914_prof);
 
     }
 
@@ -238,6 +246,6 @@ class __TwigTemplate_8fd49b60e2ad269d66cdcb10e8055f88f07789ebf170f18578a19236b01
 
     public function getDebugInfo()
     {
-        return array (  223 => 61,  179 => 59,  174 => 51,  168 => 50,  157 => 48,  149 => 20,  123 => 18,  118 => 15,  112 => 14,  100 => 6,  91 => 62,  89 => 50,  86 => 49,  84 => 48,  77 => 43,  73 => 41,  68 => 38,  66 => 37,  49 => 22,  47 => 14,  41 => 11,  33 => 6,  26 => 1,);
+        return array (  231 => 67,  187 => 65,  182 => 57,  176 => 56,  165 => 54,  157 => 20,  131 => 18,  126 => 15,  120 => 14,  108 => 6,  99 => 68,  97 => 56,  94 => 55,  92 => 54,  84 => 48,  80 => 46,  69 => 39,  67 => 38,  49 => 22,  47 => 14,  41 => 11,  33 => 6,  26 => 1,);
     }
 }

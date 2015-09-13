@@ -1,0 +1,15 @@
+/** Color Variables */
+$bgcolor: #0A2972;
+$white: #fff;
+$black: #000;
+$gray: #E6E6E6;
+
+/** End List */
+
+@mixin transition($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transform: $transition;
+}

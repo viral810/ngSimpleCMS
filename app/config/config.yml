@@ -195,3 +195,13 @@ fos_user:
     service:
             user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
 
+sensio_framework_extra:
+    view:   { annotations: false }
+    router: { annotations: true }
+
+fos_rest:
+    format_listener:
+            rules:
+                - { path: ^/, priorities: [ json, xml, html ], fallback_format: ~, prefer_extension: true }
+    view:
+      view_response_listener: 'force'
