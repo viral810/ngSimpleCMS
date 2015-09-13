@@ -27,7 +27,7 @@ class CompassFilter extends BaseSassFilter
     private $rubyPath;
     private $scss;
 
-    // sass options
+    // scss options
     private $unixNewlines;
     private $debugInfo;
     private $cacheLocation;
@@ -70,7 +70,7 @@ class CompassFilter extends BaseSassFilter
         $this->scss = $scss;
     }
 
-    // sass options setters
+    // scss options setters
     public function setUnixNewlines($unixNewlines)
     {
         $this->unixNewlines = $unixNewlines;
@@ -309,11 +309,11 @@ class CompassFilter extends BaseSassFilter
             $pb->add('--config')->add($configFile);
         }
 
-        $pb->add('--sass-dir')->add('')->add('--css-dir')->add('');
+        $pb->add('--scss-dir')->add('')->add('--css-dir')->add('');
 
-        // compass choose the type (sass or scss from the filename)
+        // compass choose the type (scss or scss from the filename)
         if (null !== $this->scss) {
-            $type = $this->scss ? 'scss' : 'sass';
+            $type = $this->scss ? 'scss' : 'scss';
         } elseif ($path = $asset->getSourcePath()) {
             // FIXME: what if the extension is something else?
             $type = pathinfo($path, PATHINFO_EXTENSION);

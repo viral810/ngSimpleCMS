@@ -17,7 +17,7 @@ use Assetic\Exception\FilterException;
 /**
  * Loads SASS files.
  *
- * @link http://sass-lang.com/
+ * @link http://scss-lang.com/
  * @author Kris Wallsmith <kris.wallsmith@gmail.com>
  */
 class SassFilter extends BaseSassFilter
@@ -39,7 +39,7 @@ class SassFilter extends BaseSassFilter
     private $noCache;
     private $compass;
 
-    public function __construct($sassPath = '/usr/bin/sass', $rubyPath = null)
+    public function __construct($sassPath = '/usr/bin/scss', $rubyPath = null)
     {
         $this->sassPath = $sassPath;
         $this->rubyPath = $rubyPath;

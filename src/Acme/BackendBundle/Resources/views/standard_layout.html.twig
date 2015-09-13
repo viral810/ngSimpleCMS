@@ -168,7 +168,9 @@ This file will override the Sonata Admin Bundle Standar Layout file
         {% endblock sonata_nav %}
     </header>
 {% endblock sonata_header %}
-
+<div ng-controller="AdminCtrl">
+    <div ng-view></div>
+</div>
 {% block sonata_wrapper %}
     <div class="wrapper row-offcanvas row-offcanvas-left">
         {% block sonata_left_side %}

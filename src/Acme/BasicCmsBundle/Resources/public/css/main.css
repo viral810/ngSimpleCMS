@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic,900&subset=latin,latin-ext);
+
+html, body{
+    font-family: 'Lato', sans-serif;
+}
+
+/** Base Module */
+
+.wrap{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    clear: both;
+}

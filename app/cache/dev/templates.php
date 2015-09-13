@@ -270,6 +270,7 @@
   'CmfCoreBundle:Form:checkbox_url_label_form_type.html.twig' => '/Applications/MAMP/htdocs/ngSimpleCMS/vendor/symfony-cmf/core-bundle/Resources/views/Form/checkbox_url_label_form_type.html.twig',
   'AcmeBasicCmsBundle:Default:page.html.twig' => '/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/BasicCmsBundle/Resources/views/Default/page.html.twig',
   'AcmeBasicCmsBundle:Default:post.html.twig' => '/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/BasicCmsBundle/Resources/views/Default/post.html.twig',
+  'AcmeBasicCmsBundle:Front:home.html.twig' => '/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/BasicCmsBundle/Resources/views/Front/home.html.twig',
   'AcmeBackendBundle:Default:index.html.twig' => '/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/BackendBundle/Resources/views/Default/index.html.twig',
   'AcmeBackendBundle::standard_layout.html.twig' => '/Applications/MAMP/htdocs/ngSimpleCMS/src/Acme/BackendBundle/Resources/views/standard_layout.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => '/Applications/MAMP/htdocs/ngSimpleCMS/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',

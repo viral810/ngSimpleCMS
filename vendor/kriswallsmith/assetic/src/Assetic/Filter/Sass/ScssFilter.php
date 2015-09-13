@@ -14,12 +14,12 @@ namespace Assetic\Filter\Sass;
 /**
  * Loads SCSS files.
  *
- * @link http://sass-lang.com/
+ * @link http://scss-lang.com/
  * @author Kris Wallsmith <kris.wallsmith@gmail.com>
  */
 class ScssFilter extends SassFilter
 {
-    public function __construct($sassPath = '/usr/bin/sass', $rubyPath = null)
+    public function __construct($sassPath = '/usr/bin/scss', $rubyPath = null)
     {
         parent::__construct($sassPath, $rubyPath);
 

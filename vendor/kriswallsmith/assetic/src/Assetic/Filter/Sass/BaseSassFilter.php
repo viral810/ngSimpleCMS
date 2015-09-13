@@ -50,9 +50,9 @@ abstract class BaseSassFilter extends BaseProcessFilter implements DependencyExt
             } else {
                 $needles = array(
                     $reference.'.scss',
-                    $reference.'.sass',
+                    $reference.'.scss',
                     self::partialize($reference).'.scss',
-                    self::partialize($reference).'.sass',
+                    self::partialize($reference).'.scss',
                 );
             }
 

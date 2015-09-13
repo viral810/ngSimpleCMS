@@ -39,7 +39,6 @@ class AppKernel extends Kernel
 
             new Sunra\AngularBundle\SunraAngularBundle(),
 
-            new AppBundle\AppBundle(),
             new Acme\BasicCmsBundle\AcmeBasicCmsBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new Acme\BackendBundle\AcmeBackendBundle(),

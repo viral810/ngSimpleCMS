@@ -1,0 +1,91 @@
+body{
+  overflow-x:hidden;
+}
+.body-wrapper{
+  width: 100%;
+  opacity: 1;
+  position: relative;
+  margin: 0;
+  @include transition(all 0.4s ease-in-out);
+
+  &.active-menu{
+    width: 74%;
+    margin-right: 25%;
+    opacity: .35;
+  }
+}
+header{
+  width: 100%;
+  margin: 0;
+  background-image: url('https://s3-us-west-2.amazonaws.com/viralpatel/houseto/home-banner.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  padding: 15px 0;
+  position: relative;
+
+  h1{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    float: left;
+  }
+
+  a{
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .nav-right{
+    float: right;
+    width: auto;
+    line-height: 28px;
+  }
+  a[role="button"]{
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    @include transition(all 0.4s ease-in-out);
+
+    &.rentorsell{
+      border-color: #fff;
+    }
+    &:hover{
+      background: #fff;
+      color: #006dcc;
+    }
+  }
+}
+
+.menu{
+  display: block;
+  position: absolute;
+  height: 100%;
+  background: #333;
+  z-index: 99;
+  padding: 1%;
+  width: 0;
+  right: 0;
+  opacity: 0;
+  @include transition(all 0.4s ease-in-out);
+
+  &.active{
+    width: 24%;
+    opacity: 1;
+  }
+
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+}

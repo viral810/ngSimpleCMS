@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Sell or Rent Property in Toronto, Hamilton, Kitchener, Vaughan | Ontario | Canada{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <!-- Place favicon.ico in the root directory -->
+
+    {% block stylesheets %}
+        {% stylesheets
+        '@AcmeBasicCmsBundle/Resources/public/css/*'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+    {% endblock %}
+</head>
+<body ng-app="HouseTO">
+<div class="menu">
+    <nav class="top-menu">
+        <a href="#">Home</a>
+    </nav>
+</div>
+<div class="body-wrapper" ng-controller="MainCtrl">
+
+    <header class="header">
+        <div class="wrap">
+            <h1><a href="/">House<span class="title-span">T.O.</span></a></h1>
+
+            <div class="nav-right">
+                <a href="#" class="rentorsell" role="button">Rent or Sell Property</a>
+                {% if app.user %}
+                    <a href="/admin/dashboard" class="login" role="button">Admin</a>
+                    <a href="/logout" class="login" role="button">Logout</a>
+                {% else %}
+                    <a href="/admin/login" class="login" role="button">login</a>
+                {% endif %}
+                <a href="#" id="trigger" role="button">Menu</a>
+            </div>
+        </div>
+    </header>
+    <div ng-view></div>
+    {% block body %}{% endblock %}
+</div>
+    {% block javascripts %}
+        {% javascripts
+            '@AcmeBasicCmsBundle/Resources/public/js/jquery.min.js'
+            '@AcmeBasicCmsBundle/Resources/public/js/angular.min.js'
+            '@AcmeBasicCmsBundle/Resources/public/js/angular-route.min.js'
+            '@AcmeBasicCmsBundle/Resources/public/js/modernizr-respond.min.js'
+            '@AcmeBasicCmsBundle/Resources/public/js/main.js'
+            '@AcmeBasicCmsBundle/Resources/public/js/app/*'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+</body>
 </html>

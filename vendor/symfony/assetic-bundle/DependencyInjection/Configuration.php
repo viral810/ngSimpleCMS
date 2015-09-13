@@ -70,7 +70,7 @@ class Configuration implements ConfigurationInterface
                     ->prototype('scalar')->end()
                 ->end()
                 ->scalarNode('ruby')->defaultValue(function () use ($finder) { return $finder->find('ruby', '/usr/bin/ruby'); })->end()
-                ->scalarNode('sass')->defaultValue(function () use ($finder) { return $finder->find('sass', '/usr/bin/sass'); })->end()
+                ->scalarNode('scss')->defaultValue(function () use ($finder) { return $finder->find('scss', '/usr/bin/scss'); })->end()
             ->end()
         ;
 

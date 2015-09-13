@@ -21,11 +21,11 @@ assetic:
             filters: [ ?yui_css ]
             output:  css/packed/app.css
         widget_css:
-            inputs: css/widget.sass
-            filters: sass
+            inputs: css/widget.scss
+            filters: scss
     filters:
         sass:
-            apply_to: "\.sass$"
+            apply_to: "\.scss$"
         yui_css:
             jar: %kernel.root_dir/java/yui-compressor-2.4.6.jar
     twig:

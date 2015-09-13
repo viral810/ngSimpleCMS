@@ -1,0 +1,149 @@
+/** Color Variables */
+/** End List */
+/* line 1, ../scss/_header.scss */
+body {
+  position: relative;
+}
+
+/* line 4, ../scss/_header.scss */
+.body-wrapper {
+  width: 100%;
+  opacity: 1;
+  position: relative;
+  margin: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transform: all 0.4s ease-in-out;
+}
+/* line 11, ../scss/_header.scss */
+.body-wrapper.active-menu {
+  width: 74%;
+  margin-right: 25%;
+  opacity: .35;
+}
+
+/* line 17, ../scss/_header.scss */
+header {
+  width: 100%;
+  margin: 0;
+  background-image: url("https://s3-us-west-2.amazonaws.com/viralpatel/houseto/home-banner.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  padding: 15px 0;
+  position: relative;
+}
+/* line 29, ../scss/_header.scss */
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  float: left;
+}
+/* line 38, ../scss/_header.scss */
+header a {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+/* line 44, ../scss/_header.scss */
+header .nav-right {
+  float: right;
+  width: auto;
+  line-height: 28px;
+}
+/* line 49, ../scss/_header.scss */
+header a[role="button"] {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transform: all 0.4s ease-in-out;
+}
+/* line 60, ../scss/_header.scss */
+header a[role="button"].rentorsell {
+  border-color: #fff;
+}
+/* line 63, ../scss/_header.scss */
+header a[role="button"]:hover {
+  background: #fff;
+  color: #006dcc;
+}
+
+/* line 70, ../scss/_header.scss */
+.menu {
+  display: block;
+  position: absolute;
+  height: 100%;
+  background: #333;
+  z-index: 99;
+  padding: 1%;
+  width: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transform: all 0.4s ease-in-out;
+}
+/* line 82, ../scss/_header.scss */
+.menu.active {
+  width: 24%;
+  opacity: 1;
+}
+/* line 87, ../scss/_header.scss */
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 1, ../scss/_home.scss */
+.cta-wrapper {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+/* line 8, ../scss/_home.scss */
+.cta-wrapper .cta {
+  padding: 25px 10px;
+  background: #0A2972;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: calc(100% / 6 - 21px);
+  display: block;
+  float: left;
+  border-right: 1px solid #000;
+}
+/* line 21, ../scss/_home.scss */
+.cta-wrapper .cta * {
+  display: inline-block;
+  width: 100%;
+}
+/* line 26, ../scss/_home.scss */
+.cta-wrapper .cta i {
+  font-size: 20px;
+}
+/* line 29, ../scss/_home.scss */
+.cta-wrapper .cta p {
+  margin: 5px 0;
+}
